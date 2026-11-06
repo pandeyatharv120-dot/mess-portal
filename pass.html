@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10-Month Pass - Mess Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+<a href="student.html">Mess Portal</a>
+<span id="studentName"></span>
+</header>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+<h5>Student Menu</h5>
+
+<a href="student.html">Dashboard</a>
+<a href="menu.html">Weekly Menu & Timings</a>
+<a href="meal-bookings.html">Meal Bookings</a>
+<a href="pass.html">10-Month Pass</a>
+<a href="mess-card.html">Digital Mess Card</a>
+<a href="billing.html">Billing</a>
+<a href="feedback.html">Feedback</a>
+
+<button class="btn btn-outline-light btn-sm mt-3"
+onclick="logout()">Logout</button>
+</aside>
+
+<main class="page-content">
+
+<h2>10-Month Meal Pass</h2>
+
+<p class="text-muted">
+Choose one plan for 10 months and proceed to demo payment.
+</p>
+
+<div class="row g-3">
+
+<div class="col-md-4">
+<label class="plan-option">
+
+<input type="radio" name="mealPlan"
+onchange="selectPlan('all')">
+
+<span class="plan-title">
+Breakfast + Lunch + Dinner
+</span>
+
+<strong class="plan-price">₹48,000</strong>
+<small>All three meals daily</small>
+
+</label>
+</div>
+
+<div class="col-md-4">
+<label class="plan-option">
+
+<input type="radio" name="mealPlan"
+onchange="selectPlan('breakfastDinner')">
+
+<span class="plan-title">
+Breakfast + Dinner
+</span>
+
+<strong class="plan-price">₹42,000</strong>
+<small>Two meals daily</small>
+
+</label>
+</div>
+
+<div class="col-md-4">
+<label class="plan-option">
+
+<input type="radio" name="mealPlan"
+onchange="selectPlan('lunchDinner')">
+
+<span class="plan-title">
+Lunch + Dinner
+</span>
+
+<strong class="plan-price">₹43,000</strong>
+<small>Two meals daily</small>
+
+</label>
+</div>
+
+<div class="col-md-4">
+<label class="plan-option">
+
+<input type="radio" name="mealPlan"
+onchange="selectPlan('allMealsWithSnacks')">
+
+<span class="plan-title">
+Breakfast + Lunch + Snacks + Dinner
+</span>
+
+<strong class="plan-price">₹52,000</strong>
+<small>All four meals daily</small>
+
+</label>
+</div>
+
+<div class="col-md-4">
+<label class="plan-option">
+
+<input type="radio" name="mealPlan"
+onchange="selectPlan('breakfastLunchSnacks')">
+
+<span class="plan-title">
+Breakfast + Snacks + Lunch
+</span>
+
+<strong class="plan-price">₹46,000</strong>
+<small>Three meals daily</small>
+
+</label>
+</div>
+
+</div>
+
+<div class="card p-3 mt-3">
+
+<div class="d-flex justify-content-between flex-wrap">
+
+<div>
+Selected:
+<strong id="selectedPlanText">None</strong>
+</div>
+
+<div>
+Amount:
+<strong id="selectedPlanPrice">₹0</strong>
+</div>
+
+</div>
+
+<button id="payButton"
+class="btn btn-success mt-3"
+onclick="proceedToPay()" disabled>
+Proceed to Pay
+</button>
+
+<div id="paymentMessage" class="mt-3"></div>
+
+<small class="text-muted">
+Demo payment only. No real bank, UPI or card payment is processed.
+</small>
+
+</div>
+
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

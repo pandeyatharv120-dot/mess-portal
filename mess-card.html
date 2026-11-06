@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digital Mess Card</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+<a href="student.html">Mess Portal</a>
+<span id="studentName"></span>
+</header>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+<h5>Student Menu</h5>
+
+<a href="student.html">Dashboard</a>
+<a href="menu.html">Weekly Menu & Timings</a>
+<a href="meal-bookings.html">Meal Bookings</a>
+<a href="pass.html">10-Month Pass</a>
+<a href="mess-card.html">Digital Mess Card</a>
+<a href="billing.html">Billing</a>
+<a href="feedback.html">Feedback</a>
+
+<button class="btn btn-outline-light btn-sm mt-3"
+onclick="logout()">Logout</button>
+</aside>
+
+<main class="page-content">
+
+<h2>Digital Mess Card</h2>
+
+<div class="pass-card mt-3">
+
+<div>
+<div class="small">MESS MANAGEMENT PORTAL</div>
+
+<h4 id="cardName" class="mt-2">Student Name</h4>
+
+<div>
+Student ID:
+<strong id="cardId">SID000000</strong>
+</div>
+
+<div class="mt-2">
+Plan: <strong id="cardPlan">No active pass</strong>
+</div>
+
+<div>
+Valid from: <span id="passStart">—</span>
+</div>
+
+<div>
+Valid until: <span id="passEnd">—</span>
+</div>
+
+<span id="passStatus"
+class="badge text-bg-secondary mt-2">
+No active pass
+</span>
+</div>
+
+<div class="qr-area text-center">
+
+<img id="passQr" class="qr-image"
+alt="Student pass QR code" hidden>
+
+<div id="qrPlaceholder" class="qr-placeholder">
+QR
+</div>
+
+<small>Student ID QR</small>
+
+</div>
+</div>
+
+<p class="small text-muted mt-2">
+QR contains demo student ID and pass details.
+It is not linked to a live attendance system.
+</p>
+
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
